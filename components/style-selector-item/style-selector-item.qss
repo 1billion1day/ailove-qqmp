@@ -19,8 +19,11 @@
     height: 140rpx;
     border-radius: 5px;
     background-size: 140rpx;
-    padding-top: 110rpx;
     background-repeat: no-repeat;
+}
+
+.padding{
+    height: 110rpx;
 }
 
 .style-desc-title {

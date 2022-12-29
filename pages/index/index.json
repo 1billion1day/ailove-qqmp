@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "footer": "/components/footer/footer",
-    "style-selector-item": "/components/style-selector-item/style-selector-item"
+    "style-selector-item": "/components/style-selector-item/style-selector-item",
+    "style-selector-group": "/components/style-selector-group/style-selector-group"
   }
 }

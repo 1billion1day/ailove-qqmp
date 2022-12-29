@@ -1,3 +1,9 @@
+.style-selector-view {
+    /*background-color: aquamarine;*/
+    width: 100%;
+    height: 330rpx;
+}
+
 .style-selector {
     /*background-color: aquamarine;*/
     width: 100%;
@@ -14,3 +20,24 @@
     overflow: scroll;
 }
 
+.preview {
+    width: 100%;
+    height: 150rpx;
+    display: flex;
+    flex-direction: row;
+}
+
+.preview-item {
+    margin: auto;
+}
+
+.preview-placeholder {
+    height: 152rpx;
+    width: 152rpx;
+}
+
+.preview-next {
+    border: 4rpx dotted #ccc;
+    /*background-color: rgba(236, 231, 231, 0.88);*/
+    text-align: center;
+}

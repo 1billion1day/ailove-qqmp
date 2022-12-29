@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "style-selector-item": "/components/style-selector-item/style-selector-item"
+    "style-selector-item": "/components/style-selector-item/style-selector-item",
+    "card": "/components/card/card"
   }
 }

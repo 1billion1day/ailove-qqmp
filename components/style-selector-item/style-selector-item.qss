@@ -1,0 +1,34 @@
+.style-item {
+    margin: 6rpx;
+    padding: 6rpx;
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 5px;
+}
+
+.style-item-border {
+    background-color: #fff;
+}
+
+.style-item-border-selected {
+    background-color: rgba(192, 125, 67, 0.7);
+}
+
+.style-item-img {
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 5px;
+    background-size: 140rpx;
+    padding-top: 110rpx;
+    background-repeat: no-repeat;
+}
+
+.style-desc-title {
+    text-align: center;
+    margin: auto;
+    height: 30rpx;
+    font-size: 23rpx;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(70%, rgba(192, 125, 67, 0.7)));
+    background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, rgba(192, 125, 67, 0.7) 70%);
+    color: white;
+}

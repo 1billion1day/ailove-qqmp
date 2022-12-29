@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "backgroundColor": "#000000",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "AI 情侣头像",
+    "navigationBarTextStyle":"black",
+    "pageOrientation": "portrait"
+  },
+  "tabBar": {
+    "color": "#808080",
+    "selectedColor": "#B86B4A",
+    "backgroundColor": "#F4ECEA",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "制作"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "图库"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "我的"
+      }
+
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+.footer {
+    /*background-color: lightskyblue;*/
+    width: 100%;
+    height: 100rpx;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: gray solid 1rpx;
+}
+
+.footer-item {
+    /*background-color: olivedrab;*/
+    flex: 1;
+    width: 50rpx;
+    height: 90rpx;
+    margin: 5rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-item-icon {
+    /*background-color: olive;*/
+    width: 65rpx;
+    height: 65rpx;
+}
+
+.footer-item-icon > image {
+    width: 65rpx;
+    height: 65rpx;
+}
+
+.footer-item-text {
+    /*background-color: orange;*/
+    width: 65rpx;
+    height: 25rpx;
+    font-size: 18rpx;
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

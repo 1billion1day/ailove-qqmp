@@ -31,6 +31,21 @@
     margin: auto;
 }
 
+.preview-item-close{
+    position: relative;
+    width: 150rpx;
+    height: 150rpx;
+}
+
+.preview-selector {
+    position: absolute;
+}
+.preview-close {
+    position: absolute;
+    top: 0;
+    right: -10rpx;
+}
+
 .preview-placeholder {
     height: 152rpx;
     width: 152rpx;

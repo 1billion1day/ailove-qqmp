@@ -1,5 +1,5 @@
 body{
-  background-color: #e4ded1;
+  background-color: #fff;
 }
 .container {
   height: 100%;
@@ -9,5 +9,5 @@ body{
   justify-content: space-between;
   padding: 10rpx 0;
   box-sizing: border-box;
-  background-color: #e4ded1;
+  background-color: #fff;
 }

@@ -8,11 +8,14 @@
         </view>
     </scroll-view>
 </view>
-<card title="已选风格" subtitle="点击已选可替换">
+<card title="已选风格" >
     <view class="preview">
         <block qq:for="{{previewList}}">
-            <style-selector-item class="preview-item" url="{{item.url}}" name="{{item.name}}"
-                                 bind:tap="onTapSelected" data-id="{{item.id}}"/>
+            <view class="preview-item preview-item-close"
+                  bind:tap="onTapSelected" data-id="{{item.id}}">
+                <style-selector-item class="preview-item preview-selector" url="{{item.url}}" name="{{item.name}}"/>
+                <icon class="preview-close" type="clear"></icon>
+            </view>
         </block>
         <block qq:for="{{placeholderList}}" qq:for-index="idx">
             <view class="preview-item preview-placeholder preview-next"></view>

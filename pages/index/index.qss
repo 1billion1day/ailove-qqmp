@@ -1,8 +1,7 @@
 .avatar-upload {
-    /*background-color: red;*/
     width: 100%;
     height: 400rpx;
-    padding: 100rpx 50rpx 0rpx;
+    padding: 60rpx auto 0rpx;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -10,28 +9,32 @@
 
 .avatar-upload-button {
     width: 400rpx;
+    /*width: 100%;*/
     height: 400rpx;
-    /*background-image: url("https://iph.href.lu/400x400?text=点击上传人像照片");*/
-    /*background-size: 400rpx;*/
-    background-color: rgba(234, 209, 147, 0.5);
+    background-color: rgba(235, 200, 230, 1);
     display: flex;
+    /*flex-direction: row;*/
 }
 
 .avatar-upload-button > view {
-    width: 398rpx;
     height: 398rpx;
-    background-size: 398rpx;
-    background-repeat: no-repeat;
-    background-position: center center;
+    width: 398rpx;
+/*max-width: 100%;*/
+/*max-width: 398px;*/
+/*max-height: 398px;*/
+background-size: 398rpx;
+background-repeat: no-repeat;
+background-position: center center;
 }
 
-.avatar-upload-button > image {
-    /*display: block;*/
-    width: 398rpx;
-    height: 398rpx;
+/*.avatar-upload-button > view > image {*/
+/*    width: 398rpx;*/
+/*    height: 398rpx;*/
+/*}*/
 
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
+.avatar-upload-button > image {
+    width: 398rpx;
+    height: auto;
 }
 
 .card {
@@ -40,7 +43,7 @@
 
 
 .generator {
-    background-color: #e4ded1;
+    background-color: #fff;
     width: 100%;
     height: 100rpx;
     position: fixed;
@@ -52,50 +55,15 @@
     margin: 0, 20rpx;
     width: 500rpx;
     /*background-color: dodgerblue;*/
-    color: rgba(192, 125, 67, 0.7);
-    /*color: white;*/
-    background-image: -webkit-gradient(linear, left top, left top, from(rgba(192, 125, 67, 0.6)), color-stop(47%, rgb(234, 209, 147, 0.5)));
-    background-image: linear-gradient(90deg, rgba(192, 125, 67, 0.6) 0%, rgb(234, 209, 147, 0.5) 47%);
-}
-
-.number-card-group {
-    padding-top: 30rpx;
-    width: 100%;
-}
-
-.number-group {
-    width: 100%;
-    height: 100rpx;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.number-button {
-    width: 160rpx;
-    height: 60rpx;
-    background-color: #252525;
-    color: #E8E8E8;
-    font-size: 26rpx;
-    text-align: center;
-    line-height: 60rpx;
-    border: 1rpx solid #8950e4;
-}
-
-.number-button-hover {
-    width: 160rpx;
-    height: 60rpx;
-    background-color: #252525;
-    color: #E8E8E8;
-    font-size: 26rpx;
-    text-align: center;
-    line-height: 60rpx;
-    border: 1rpx solid #8950e4;
+    /*color: rgba(192, 125, 67, 0.7);*/
+    color: white;
+    background-image: -webkit-gradient(linear, left top, left top, from(rgba(200, 210, 250, 1)), color-stop(47%, rgb(235, 200, 230, 1)));
+    background-image: linear-gradient(90deg, rgba(200, 210, 250, 1) 0%, rgb(235, 200, 230, 1) 47%);
 }
 
 .padding-footer {
     height: 150rpx;
     /*background-color: #e4ded1;*/
-    background-color: black;
+    background-color: white;
+    /*background-color: black;*/
 }

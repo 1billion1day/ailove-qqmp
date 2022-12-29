@@ -47,12 +47,17 @@ Page({
             sizeType: ['original', 'compressed'],
             success: result => {
                 console.log(result)
-                that.setData({
-                    avatarUrl: result.tempFilePaths[0]
-                })
+                qq.showLoading({title:"上传图片中"})
+                setTimeout(() => {
+                    qq.hideLoading()
+                    that.setData({
+                        avatarUrl: result.tempFilePaths[0]
+                    })
+                }, 2000)
             },
             fail: res => {
                 console.log(res)
+                qq.showToast({title: res.errMsg, icon: "none"})
             },
             complete: res => {
                 console.log(res)

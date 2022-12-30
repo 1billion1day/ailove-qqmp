@@ -69,7 +69,7 @@ Component({
             const previewSelected = this.data.styleList.map((item, index) => {
                 return false
             })
-            console.log(previewSelected)
+            // console.log(previewSelected)
             this.setData({
                 previewSelected: previewSelected
             })

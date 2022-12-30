@@ -61,7 +61,8 @@ Page({
         qq.navigateTo({
             url: '../logs/logs'
         })
-    }, bindChooseImageTap: function () {
+    },
+    bindChooseImageTap: function () {
         console.log("123")
         const that = this
         console.log(this)

@@ -18,14 +18,20 @@
     "list": [
       {
         "pagePath": "pages/index/index",
+        "iconPath": "/statics/icons/actress.png",
+        "selectedIconPath": "/statics/icons/actress-active.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/logs/logs",
+        "iconPath": "/statics/icons/photo.png",
+        "selectedIconPath": "/statics/icons/photo-active.png",
         "text": "图库"
       },
       {
         "pagePath": "pages/logs/logs",
+        "iconPath": "/statics/icons/shape.png",
+        "selectedIconPath": "/statics/icons/shape-active.png",
         "text": "我的"
       }
 

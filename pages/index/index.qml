@@ -5,10 +5,10 @@
         </view>
     </view>
     <card class="card">
-        <style-selector-group styleList="{{styleList}}" onSelected="{{onSelected}}"/>
+        <style-selector-group styleList="{{styleList}}" bind:onSelectedEvent="onSelectedEvent"/>
     </card>
     <view class="padding-footer"></view>
     <view class="generator">
-        <button>制作头像</button>
+        <button bind:tap="onTapGenerator" >制作头像</button>
     </view>
 </view>

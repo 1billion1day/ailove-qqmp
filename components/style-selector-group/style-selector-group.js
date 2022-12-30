@@ -46,7 +46,7 @@ Component({
                     }),
                 })
             }
-            this.properties.onSelected(this.data.previewList);
+            this.triggerEvent('onSelectedEvent', {selectedList: this.data.previewList});
         },
         onTapSelected: function (e) {
             console.log(e.currentTarget.dataset.id)
@@ -60,7 +60,8 @@ Component({
                     return item
                 }),
             });
-            this.properties.onSelected(this.data.previewList);
+
+            this.triggerEvent('onSelectedEvent', {selectedList: this.data.previewList});
         }
     },
     lifetimes: {
@@ -68,7 +69,7 @@ Component({
             const previewSelected = this.data.styleList.map((item, index) => {
                 return false
             })
-            // console.log(previewSelected)
+            console.log(previewSelected)
             this.setData({
                 previewSelected: previewSelected
             })

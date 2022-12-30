@@ -13,4 +13,7 @@
     <view class="control">
         <love-button openType="share">分享</love-button>
     </view>
+    <view class="control">
+        <love-button>下载</love-button>
+    </view>
 </view>

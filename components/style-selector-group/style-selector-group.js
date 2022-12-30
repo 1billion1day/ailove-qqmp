@@ -1,11 +1,6 @@
 Component({
     properties: {
         styleList: Array,//{id, url, name}
-        onSelected: {
-            type: Function,
-            value: () => {
-            }
-        }
     },
     data: {
         previewList: [],// {id, name, url}

@@ -2,7 +2,9 @@
   "pages":[
     "pages/index/index",
     "pages/finished/finished",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/gallery/gallery",
+    "pages/setting/setting"
   ],
   "window":{
     "backgroundTextStyle":"dark",
@@ -24,13 +26,13 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/gallery/gallery",
         "iconPath": "/statics/icons/photo.png",
         "selectedIconPath": "/statics/icons/photo-active.png",
         "text": "图库"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/setting/setting",
         "iconPath": "/statics/icons/shape.png",
         "selectedIconPath": "/statics/icons/shape-active.png",
         "text": "设置"

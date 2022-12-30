@@ -31,31 +31,59 @@ Page({
         styleSelected: null,
     }, onSelectedEvent: function (e) {
         const selectedList = e.detail.selectedList;
-        console.log(e.detail.selectedList);
+        // console.log(e.detail.selectedList);
         this.setData({
             styleSelected: selectedList
         })
-    }, onTapGenerator: function () {
-        console.log(this.data.styleSelected);
-        console.log(this.data.avatarUrl)
+    },
+    onTapGenerator: function () {
+        // console.log(this.data.styleSelected);
+        // console.log(this.data.avatarUrl)
         if (this.data.avatarUrl === null) {
             qq.showToast({title: "请上传头像", icon: "none"})
             return;
         }
-        if (this.data.styleSelected === null || this.data.styleSelected.length == 0) {
+        if (this.data.styleSelected === null || this.data.styleSelected.length === 0) {
             qq.showToast({title: "请选择生成风格", icon: "none"})
             return;
         }
 
         const that = this;
         qq.showLoading({title: "生成图片中"})
-        setTimeout(function () {
-            qq.hideLoading();
-            qq.showToast({
-                title: "生成成功 \n" + that.data.styleSelected.map((value) => value.name),
-                icon: "none"
-            })
-        }, 1000)
+        qq.request({
+            url: 'https://chat.wu.ren/img/convert',
+            method: "POST",
+            data: {
+                url: that.data.avatarUrl,
+            },
+            success: function (res) {
+                console.log(res)
+                qq.hideLoading();
+                if (res.statusCode === 200) {
+                    qq.showToast({
+                        title: "生成成功",
+                        icon: "none",
+                        success: function () {
+                            qq.navigateTo({
+                                url: '/pages/finished/finished?convertUrls=' + JSON.stringify(['https://f.wu.ren/' + res.data.url])
+                            })
+                        }
+                    })
+                } else {
+                    qq.showToast({
+                        title: "生成失败 " + res.data.message,
+                        icon: "none"
+                    })
+                }
+            },
+            fail: function (res) {
+                qq.hideLoading();
+                qq.showToast({
+                    title: "生成失败 " + res.errMsg,
+                    icon: "none"
+                })
+            }
+        })
     }, //事件处理函数
     bindViewTap: function () {
         qq.navigateTo({
@@ -70,13 +98,24 @@ Page({
             count: 1, sizeType: ['original', 'compressed'], success: result => {
                 console.log(result)
                 qq.showLoading({title: "上传图片中"})
-                setTimeout(() => {
-                    // TODO
-                    qq.hideLoading()
-                    that.setData({
-                        avatarUrl: result.tempFilePaths[0]
-                    })
-                }, 1000)
+                qq.uploadFile({
+                    url: 'https://chat.wu.ren/img/upload',
+                    filePath: result.tempFilePaths[0],
+                    name: 'file',
+                    success: res => {
+                        qq.hideLoading()
+                        // console.log(res)
+                        const jdata = JSON.parse(res.data)
+                        console.log(jdata)
+                        if (jdata.message !== undefined) {
+                            qq.showToast({title: jdata.message, icon: "none"})
+                            return;
+                        }
+                        that.setData({
+                            avatarUrl: jdata.url
+                        })
+                    }
+                });
             }, fail: res => {
                 console.log(res)
                 // qq.showToast({title: res.errMsg, icon: "none"})

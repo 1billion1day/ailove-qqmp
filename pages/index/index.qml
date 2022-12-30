@@ -9,6 +9,6 @@
     </card>
     <view class="padding-footer"></view>
     <view class="generator">
-        <button bind:tap="onTapGenerator" >制作头像</button>
+        <love-button bind:tap="onTapGenerator" >制作头像</love-button>
     </view>
 </view>

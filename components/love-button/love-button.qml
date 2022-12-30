@@ -1,0 +1,1 @@
+<button open-type="{{openType}}"><slot></slot></button>

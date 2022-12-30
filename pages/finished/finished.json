@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "love-button": "/components/love-button/love-button"
+  }
+}

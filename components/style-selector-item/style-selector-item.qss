@@ -1,10 +1,53 @@
-.style-item {
-    margin: 6rpx;
-    padding: 6rpx;
+.default {
     width: 140rpx;
     height: 140rpx;
+}
+
+.default-padding {
+    height: 110rpx;
+}
+
+.default-title {
+    height: 30rpx;
+    font-size: 23rpx;
+}
+.default-close {
+    width: 20rpx;
+    height: 20rpx;
+    top: 0;
+    right: -10rpx;
+}
+
+.small {
+    width: 70rpx;
+    height: 70rpx;
+}
+
+.small-padding {
+    height: 45rpx;
+}
+
+.small-title {
+    height: 25rpx;
+    font-size: 20rpx;
+}
+
+.small-close {
+    top: -2rpx;
+    right: -2rpx;
+}
+
+.style-item {
+    margin: 3rpx;
+    padding: 6rpx;
     border-radius: 5px;
     position: relative;
+}
+.style-item-empty {
+    margin: 8rpx 3rpx;
+    /*padding: 6rpx;*/
+    border-radius: 5px;
+    /*position: relative;*/
 }
 
 .style-item-border {
@@ -16,36 +59,35 @@
 }
 
 .style-item-img {
-    width: 140rpx;
-    height: 140rpx;
     border-radius: 5px;
-    background-size: 140rpx;
-    background-repeat: no-repeat;
     position: absolute;
 }
 
 .style-item-img > image {
-    width: 140rpx;
-    height: 140rpx;
 }
 
 .style-item-mask {
-    width: 140rpx;
-    height: 140rpx;
     border-radius: 5px;
     position: absolute;
 }
 
 .padding {
-    height: 110rpx;
 }
 
 .style-desc-title {
     text-align: center;
     margin: auto;
-    height: 30rpx;
-    font-size: 23rpx;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(70%, rgba(220, 140, 180, 0.6)));
     background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, rgba(220, 140, 180, 0.6) 70%);
     color: white;
+}
+
+.preview-close {
+    position: absolute;
+}
+
+.preview-next {
+    border: 4rpx dotted #ccc;
+    /*background-color: rgba(236, 231, 231, 0.88);*/
+    text-align: center;
 }

@@ -1,9 +1,16 @@
 Component({
-    properties: {styleList: Array},
+    properties: {
+        styleList: Array,//{id, url, name}
+        onSelected: {
+            type: Function,
+            value: () => {
+            }
+        }
+    },
     data: {
-        previewList: [],
+        previewList: [],// {id, name, url}
         placeholderList: [1, 1, 1, 1],
-        previewSelected: []
+        previewSelected: [], // boolean
     },
     methods: {
         onTapStyle: function (e) {
@@ -39,6 +46,7 @@ Component({
                     }),
                 })
             }
+            this.properties.onSelected(this.data.previewList);
         },
         onTapSelected: function (e) {
             console.log(e.currentTarget.dataset.id)
@@ -51,7 +59,8 @@ Component({
                     }
                     return item
                 }),
-            })
+            });
+            this.properties.onSelected(this.data.previewList);
         }
     },
     lifetimes: {
@@ -59,7 +68,7 @@ Component({
             const previewSelected = this.data.styleList.map((item, index) => {
                 return false
             })
-            console.log(previewSelected)
+            // console.log(previewSelected)
             this.setData({
                 previewSelected: previewSelected
             })

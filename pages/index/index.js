@@ -10,32 +10,26 @@ Page({
         canIUse: qq.canIUse('button.open-type.getUserInfo'),
         avatarUrl: null,
         styleList: [
-            {url: "/statics/style1.jpg", name: "动漫风"},
-            {url: "https://iph.href.lu/140x140?text=1", name: "动漫风"},
-            {url: "https://iph.href.lu/140x140?text=2", name: "动漫风"},
-            {url: "https://iph.href.lu/140x140?text=3", name: "动漫风"},
-            {url: "https://iph.href.lu/140x140?text=4", name: "动漫风"},
-            {url: "https://iph.href.lu/140x140?text=5", name: "动漫风"},
-            {url: "https://iph.href.lu/140x140?text=6", name: "动漫风"},
-            {url: "https://iph.href.lu/140x140?text=7", name: "动漫风"},
-            {url: "https://iph.href.lu/140x140?text=8", name: "动漫风"},
-            {url: "https://iph.href.lu/140x140?text=9", name: "动漫风"},
-            {url: "https://iph.href.lu/140x140?text=10", name: "动漫风"},
+            {id: 0, url: "/statics/style1.jpg", name: "动漫风"},
+            {id: 0, url: "https://iph.href.lu/140x140?text=1", name: "动漫风"},
+            {id: 0, url: "https://iph.href.lu/140x140?text=2", name: "动漫风"},
+            {id: 0, url: "https://iph.href.lu/140x140?text=3", name: "动漫风"},
+            {id: 0, url: "https://iph.href.lu/140x140?text=4", name: "动漫风"},
+            {id: 0, url: "https://iph.href.lu/140x140?text=5", name: "动漫风"},
+            {id: 0, url: "https://iph.href.lu/140x140?text=6", name: "动漫风"},
+            {id: 0, url: "https://iph.href.lu/140x140?text=7", name: "动漫风"},
+            {id: 0, url: "https://iph.href.lu/140x140?text=8", name: "动漫风"},
+            {id: 0, url: "https://iph.href.lu/140x140?text=9", name: "动漫风"},
+            {id: 0, url: "https://iph.href.lu/140x140?text=10", name: "动漫风"},
         ],
-        styleSelected: null,
+        onSelected: function (e){
+            console.log(e);
+        },
     },
     //事件处理函数
     bindViewTap: function () {
         qq.navigateTo({
             url: '../logs/logs'
-        })
-    },
-    bindTapStyle: function (e) {
-        const {id: id} = e.target.dataset
-        const query = wx.createSelectorQuery()
-        console.log(query.select('style-border-view-' + id))
-        this.setData({
-            styleSelected: id
         })
     },
     bindChooseImageTap: function () {
@@ -47,8 +41,9 @@ Page({
             sizeType: ['original', 'compressed'],
             success: result => {
                 console.log(result)
-                qq.showLoading({title:"上传图片中"})
+                qq.showLoading({title: "上传图片中"})
                 setTimeout(() => {
+                    // TODO
                     qq.hideLoading()
                     that.setData({
                         avatarUrl: result.tempFilePaths[0]
@@ -57,7 +52,7 @@ Page({
             },
             fail: res => {
                 console.log(res)
-                qq.showToast({title: res.errMsg, icon: "none"})
+                // qq.showToast({title: res.errMsg, icon: "none"})
             },
             complete: res => {
                 console.log(res)

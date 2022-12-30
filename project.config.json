@@ -23,9 +23,13 @@
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
-	"qqappid": "1108100302",
+	"qqappid": "1112267860",
 	"projectname": "ailove-qqmp-new",
-	"scripts": {},
+	"scripts": {
+		"beforeCompile": "",
+		"beforePreview": "",
+		"beforeUpload": ""
+	},
 	"condition": {
 		"search": {
 			"current": -1,

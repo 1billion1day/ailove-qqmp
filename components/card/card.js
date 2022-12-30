@@ -1,7 +1,10 @@
 Component({
     properties: {
-        title: String,
-        subtitle:{
+        title: {
+            type: String,
+            value: ''
+        },
+        subtitle: {
             type: String,
             value: ''
         }

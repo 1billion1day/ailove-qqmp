@@ -1,0 +1,32 @@
+.gallery-view{
+    /*background-color: red;*/
+    width: 100%;
+    /*height: 100%;*/
+}
+
+.gallery-view>scroll-view{
+    width: 100%;
+    /*height: 100%;*/
+    /*height: 2000rpx;*/
+}
+
+.scroll-view{
+    /*background-color: dodgerblue;*/
+    /*height: 2000rpx;*/
+    display: flex;
+    flex-direction: row;
+}
+
+.scroll-column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: true;
+    overflow: scroll;
+}
+
+.img{
+    width: 90%;
+    margin: 10rpx auto;
+    border: 3px solid rgba(235, 200, 230, 1);
+}

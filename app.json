@@ -1,9 +1,8 @@
 {
   "pages":[
+    "pages/gallery/gallery",
     "pages/index/index",
     "pages/finished/finished",
-    "pages/logs/logs",
-    "pages/gallery/gallery",
     "pages/setting/setting"
   ],
   "window":{

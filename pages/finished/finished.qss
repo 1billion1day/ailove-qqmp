@@ -31,6 +31,7 @@
 .item > image {
     /*width: auto;*/
     height: 100%;
+    border: 3px solid rgba(235, 200, 230, 1);
 }
 
 .control {

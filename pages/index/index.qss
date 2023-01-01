@@ -57,6 +57,12 @@
     position: fixed;
     bottom: 0rpx;
     left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.generator > love-button {
+    width: 500rpx;
 }
 
 

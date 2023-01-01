@@ -3,10 +3,14 @@ Component({
         openType: {
             type: String,
             value: ""
-        }
+        },
     },
     data: {},
-    methods: {},
+    methods: {
+        getUserInfo: function (e) {
+            this.triggerEvent('getUserInfo', e.detail);
+        }
+    },
     lifetimes: {
         created: function () {
             console.log('created');

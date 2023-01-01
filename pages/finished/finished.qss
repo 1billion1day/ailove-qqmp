@@ -35,6 +35,6 @@
 }
 
 .control {
-    /*background-color: dodgerblue;*/
     padding-top: 50rpx;
+    width: 500rpx;
 }

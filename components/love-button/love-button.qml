@@ -1,1 +1,1 @@
-<button open-type="{{openType}}"><slot></slot></button>
+<button open-type="{{openType}}" bindgetuserinfo="getUserInfo"><slot></slot></button>

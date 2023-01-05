@@ -1,6 +1,9 @@
 Page({
     data: {
-        convertUrls: null
+        convertUrls: [
+            // 'http://f.wu.ren/attach/2023_1_6_1661300101.jpg',
+            // 'http://f.wu.ren/attach/2023_1_6_2133190872.jpg',
+        ]
     },
     onLoad: function (options) {
         this.setData({

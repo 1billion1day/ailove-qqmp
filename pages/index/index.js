@@ -51,7 +51,8 @@ Page({
         const that = this;
         qq.showLoading({title: "生成图片中"})
         qq.request({
-            url: 'https://chat.wu.ren/img/convert',
+            // url: 'https://chat.wu.ren/img/convert',
+            url: 'http://127.0.0.1:9091/img/convert/bd',
             method: "POST",
             data: {
                 url: that.data.avatarUrl,
@@ -60,12 +61,15 @@ Page({
                 console.log(res)
                 qq.hideLoading();
                 if (res.statusCode === 200) {
+                    const urls = res.data.urls.map((url, index) => {
+                        return 'https://f.wu.ren/' + url
+                    })
                     qq.showToast({
                         title: "生成成功",
                         icon: "none",
                         success: function () {
                             qq.navigateTo({
-                                url: '/pages/finished/finished?convertUrls=' + JSON.stringify(['https://f.wu.ren/' + res.data.url])
+                                url: '/pages/finished/finished?convertUrls=' + JSON.stringify(urls)
                             })
                         }
                     })
@@ -99,7 +103,8 @@ Page({
                 console.log(result)
                 qq.showLoading({title: "上传图片中"})
                 qq.uploadFile({
-                    url: 'https://chat.wu.ren/img/upload',
+                    // url: 'https://chat.wu.ren/img/upload',
+                    url: 'http://127.0.0.1:9091/img/upload',
                     filePath: result.tempFilePaths[0],
                     name: 'file',
                     success: res => {

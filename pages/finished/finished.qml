@@ -4,7 +4,7 @@
             <view class="scroll-frame">
                 <block qq:for="{{convertUrls}}" qq:key="*this">
                     <view class="item">
-                        <image src="{{item}}"></image>
+                        <image src="{{item}}" mode="widthFix"></image>
                     </view>
                 </block>
             </view>

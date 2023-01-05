@@ -1,9 +1,9 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/finished/finished",
     "pages/gallery/gallery",
-    "pages/setting/setting",
-    "pages/finished/finished"
+    "pages/setting/setting"
   ],
   "window":{
     "backgroundTextStyle":"dark",

@@ -1,16 +1,54 @@
-.gallery-view{
-    /*background-color: red;*/
+.tabs-group {
     width: 100%;
-    /*height: 100%;*/
+    height: 100rpx;
+    display: flex;
+    flex-direction: row;
 }
 
-.gallery-view>scroll-view{
+.tabs-group .tab {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28rpx;
+    flex-direction: column;
+}
+
+.tabs-group .tab .line {
+    margin-top: 10rpx;
+    width: 100rpx;
+    height: 4rpx;
+}
+
+.tabs-group .tab.deactivate .tab-content {
+    color: #808080;
+}
+
+.tabs-group .tab.activate .tab-content {
+    color: #B86B4A;
+}
+
+.tabs-group .tab.deactivate .line {
+    background-color: #e5e5e5;
+}
+
+.tabs-group .tab.activate .line {
+    background-image: -webkit-gradient(linear, left top, left top, from(rgba(200, 210, 250, 1)), color-stop(47%, rgb(235, 200, 230, 1)));
+    background-image: linear-gradient(90deg, rgba(200, 210, 250, 1) 0%, rgb(235, 200, 230, 1) 47%);
+}
+
+.gallery-view {
+    width: 100%;
+}
+
+.gallery-view > scroll-view {
     width: 100%;
     /*height: 100%;*/
     /*height: 2000rpx;*/
 }
 
-.scroll-view{
+.scroll-view {
     /*background-color: dodgerblue;*/
     /*height: 2000rpx;*/
     display: flex;
@@ -25,7 +63,7 @@
     overflow: scroll;
 }
 
-.img{
+.img {
     width: 90%;
     margin: 10rpx auto;
     border: 3px solid rgba(235, 200, 230, 1);

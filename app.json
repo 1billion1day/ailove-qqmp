@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/create/create",
     "pages/index/index",
     "pages/finished/finished",
     "pages/gallery/gallery",
@@ -19,22 +20,22 @@
     "backgroundColor": "#F4ECEA",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "iconPath": "/statics/icons/actress.png",
-        "selectedIconPath": "/statics/icons/actress-active.png",
-        "text": "首页"
-      },
-      {
         "pagePath": "pages/gallery/gallery",
         "iconPath": "/statics/icons/photo.png",
         "selectedIconPath": "/statics/icons/photo-active.png",
-        "text": "图库"
+        "text": "100"
+      },
+      {
+        "pagePath": "pages/create/create",
+        "iconPath": "/statics/icons/actress.png",
+        "selectedIconPath": "/statics/icons/actress-active.png",
+        "text": "制作"
       },
       {
         "pagePath": "pages/setting/setting",
         "iconPath": "/statics/icons/shape.png",
         "selectedIconPath": "/statics/icons/shape-active.png",
-        "text": "设置"
+        "text": "我的"
       }
     ]
   }

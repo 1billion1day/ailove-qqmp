@@ -1,10 +1,10 @@
 {
   "pages":[
     "pages/create/create",
+    "pages/setting/setting",
     "pages/index/index",
     "pages/finished/finished",
-    "pages/gallery/gallery",
-    "pages/setting/setting"
+    "pages/gallery/gallery"
   ],
   "window":{
     "backgroundTextStyle":"dark",

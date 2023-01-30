@@ -1,6 +1,8 @@
 {
     "usingComponents": {
         "footer": "/components/footer/footer",
-        "love-button": "/components/love-button/love-button"
+        "love-button": "/components/love-button/love-button",
+      "love-button": "/components/love-button/love-button",
+      "love-button": "/components/love-button/love-button"
     }
 }

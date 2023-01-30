@@ -22,12 +22,25 @@
         </view>
     </view>
     <view class="content">
-        <view class="member-card">
-开通会员
-        </view>
+<!--        <view class="member-card">-->
+<!--开通会员-->
+<!--        </view>-->
         <card title="常见问题">
-            <view class="card-text">
-                如果你在使用情侣头像的过程中遇到任何问题或者希望进行反馈，可以发送邮件到官方邮箱xxx@xxx.com，也可以通过官方客服微信1234567或直接扫描下方二维码添加客服与我们联系，并可立即加入AI情侣头像交流群，与志同道合的朋友们一起研究无限可能~
+            <view class="gallery-view">
+                <scroll-view scroll-y="true">
+                    <view class="scroll-view">
+                        <view class="scroll-column">
+                            <block qq:for="{{imgUrls}}" qq:key="id" qq:for-index="idx">
+                                <image class="img" qq:if="{{idx%2===0}}" mode="widthFix" src="{{item.url}}"></image>
+                            </block>
+                        </view>
+                        <view class="scroll-column">
+                            <block qq:for="{{imgUrls}}" qq:key="id" qq:for-index="idx">
+                                <image class="img" qq:if="{{idx%2===1}}" mode="widthFix" src="{{item.url}}"></image>
+                            </block>
+                        </view>
+                    </view>
+                </scroll-view>
             </view>
         </card>
     </view>

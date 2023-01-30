@@ -6,7 +6,20 @@ Page({
         hasUserInfo: false,
         canIUse: qq.canIUse('button.open-type.getUserInfo'),
         headerLeftIcon: '/statics/icons/user.png',
-        headerCenterText: '登录/注册'
+        headerCenterText: '登录/注册',
+        imgUrls: [
+            {id: 0, url: 'https://iph.href.lu/140x140'},
+            {id: 0, url: 'https://iph.href.lu/140x140'},
+            {id: 0, url: 'https://iph.href.lu/140x140'},
+            {id: 0, url: 'https://iph.href.lu/140x140'},
+            {id: 0, url: 'https://iph.href.lu/140x140'},
+            {id: 0, url: 'https://iph.href.lu/140x140'},
+            {id: 0, url: 'https://iph.href.lu/140x140'},
+            {id: 0, url: 'https://iph.href.lu/140x140'},
+            {id: 0, url: 'https://iph.href.lu/140x140'},
+            {id: 0, url: 'https://iph.href.lu/140x140'},
+            {id: 0, url: 'https://iph.href.lu/140x140'},
+        ],
     },
     onLoad: function (options) {
         if (app.globalData.userInfo) {

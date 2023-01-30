@@ -25,7 +25,7 @@
 <!--        <view class="member-card">-->
 <!--开通会员-->
 <!--        </view>-->
-        <card title="常见问题">
+        <card title="我的图片">
             <view class="gallery-view">
                 <scroll-view scroll-y="true">
                     <view class="scroll-view">

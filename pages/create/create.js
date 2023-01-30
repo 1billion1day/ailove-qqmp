@@ -31,7 +31,10 @@ Page({
     },
     bindBackToHome: function () {
         this.setData({
-            tempFilePath: null
+            tempFilePath: null,
+            urls: null,
+            state: 0,
+            avatarUrl: null
         })
     },
     bindNextTap: function () {
@@ -40,13 +43,17 @@ Page({
             state: 1
         })
         qq.showLoading({title: "生成图片中"})
+        const sessionKey = qq.getStorageSync('sessionKey')
+        console.log(sessionKey)
         qq.uploadFile({
             url: 'https://chat.wu.ren/img/upload',
-            // url: 'http://127.0.0.1:9091/img/upload',
+            header: {
+                "OB-SESSION-KEY": sessionKey
+            },
             filePath: that.data.tempFilePath,
             name: 'file',
             success: res => {
-                // console.log(res)
+                console.log(res)
                 const jdata = JSON.parse(res.data)
                 console.log(jdata)
                 if (jdata.message !== undefined) {
@@ -56,11 +63,16 @@ Page({
                 that.setData({
                     avatarUrl: jdata.url
                 })
+                console.log(that.data.avatarUrl)
                 qq.request({
                     url: 'https://chat.wu.ren/img/convert',
                     method: "POST",
+                    header: {
+                        "OB-SESSION-KEY": sessionKey
+                    },
                     data: {
                         url: that.data.avatarUrl,
+                        amount: 1
                     },
                     success: function (res) {
                         console.log(res)
@@ -68,15 +80,14 @@ Page({
                             const urls = res.data.urls.map((url, index) => {
                                 return 'https://f.wu.ren/' + url
                             })
+                            console.log(urls)
+                            that.setData({
+                                urls: urls,
+                                state: 2
+                            })
                             qq.showToast({
                                 title: "生成成功",
-                                icon: "none",
-                                success: function () {
-                                    that.setData({
-                                        urls: urls,
-                                        state: 2
-                                    })
-                                }
+                                icon: "none"
                             })
                         } else {
                             qq.showToast({
@@ -92,12 +103,13 @@ Page({
                         })
                     },
                     complete: res => {
+                        console.log(res)
                         qq.hideLoading();
                     }
                 })
             },
             complete: res => {
-                qq.hideLoading();
+                // qq.hideLoading();
                 that.setData({
                     state: 0,
                 })
